@@ -5,6 +5,7 @@ Created on Fri Nov 20 22:45:16 2020
 @author: KevinKang from TWO & Solutions
 """
 
+# on *Console*
 import matplotlib.pyplot as plt
 import numpy as np
 import scipy.stats
@@ -16,10 +17,14 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 # from goodness-of-fit as rmse
 
-# On *console* 
+
+# On *Terminal* 
 # conda install sklearn
 # conda install scikit-learn
 # pip install -U scikit-learn scipy matplotlib
+#
+# Please not to be confused for input commands between Console and Terminal
+# Python is different from either IDL, MATLAB, or R language 
 
 
 # Preparing simulated and observed data
