@@ -8,16 +8,23 @@ Created on Fri Nov 20 22:45:16 2020
 import matplotlib.pyplot as plt
 import numpy as np
 import scipy.stats
+import sklearn
+
 from sklearn.metrics import mean_squared_error
 from sklearn import datasets, linear_model
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 # from goodness-of-fit as rmse
 
+# On *console* 
+# conda install sklearn
+# conda install scikit-learn
+# pip install -U scikit-learn scipy matplotlib
+
 
 # Preparing simulated and observed data
-data_sim = np.array([3, -0.5, 2, 7, 10, 4, 5.5, 8, 1.8, 7.5])
-data_obs = np.array([2.5, 0.0, 2, 8, 12, 3.5, 5, 9, 1.0, 8.5]).reshape((-1, 1))
+data_sim = np.array([3.5, -0.6, 3, 7, 10, 4, 5.5, 8, 1.8, 7.5])
+data_obs = np.array([3, 0.2, 3, 8, 12, 3.5, 5, 9, 1.0, 8.5]).reshape((-1, 1))
 #data_sim = np.random.randint(0,100,size=10)
 #data_obs = np.random.randint(0,100,size=10)
 
@@ -30,8 +37,8 @@ print ("slope: ", model.coef_)
 
 
 # Preparing simulated and observed data
-data_sim = np.array([3, -0.5, 2, 7, 10, 4, 5.5, 8, 1.8, 7.5])
-data_obs = np.array([2.5, 0.0, 2, 8, 12, 3.5, 5, 9, 1.0, 8.5])
+data_sim = np.array([3.5, -0.6, 3, 7, 10, 4, 5.5, 8, 1.8, 7.5])
+data_obs = np.array([3, 0.2, 3, 8, 12, 3.5, 5, 9, 1.0, 8.5])
 
 # Calculate RMSE, MBE, MAE, and Index of Agreement 
 print ("RMSE:" +str(np.sqrt(mean_squared_error(data_sim, data_obs))))
